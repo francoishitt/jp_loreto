@@ -349,6 +349,7 @@
 
     var electores = num(['total_electores_habiles']);
     var emitidos = num(['total_votos_emitidos']);
+	var mesas = num(['total_mesas']);
     var validos = num(['total_votos_validos']);
     var ausentes = num(['ausentes'], electores - emitidos);
     var pctAus = num(['pct_ausent'], electores ? (ausentes * 100 / electores) : 0);
@@ -375,6 +376,7 @@
       <b>Control ONPE:</b> ${control}<br><br>
 
       <b>Electores hábiles:</b> ${fmt(electores)}<br>
+	  <b>N.° de mesas:</b> ${fmt(mesas)}<br>
       <b>Total votos emitidos:</b> ${fmt(emitidos)}<br>
       <b>Total votos válidos:</b> ${fmt(validos)}<br>
       <b>Ausentes:</b> ${fmt(ausentes)}<br>
